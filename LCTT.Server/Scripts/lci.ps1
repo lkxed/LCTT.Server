@@ -7,7 +7,7 @@ if ($null -eq (Get-Module -ListAvailable -Name PSSQLite)) {
 }
 Import-Module PSSQLite
 
-$TranslateProject = '~/Developer/TranslateProject'
+$TranslateProject = 'PATH-TO/TranslateProject'
 $dataSource = 'Data/SQLite.db'
 $table = 'URL'
 
