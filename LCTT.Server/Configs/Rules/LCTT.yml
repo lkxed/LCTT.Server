@@ -1,0 +1,75 @@
+opensource.com:
+  feed: feed
+  title: //h1[contains(@class, "published page-title")]/span
+  author: //article[@class="profile"]/a
+  date: //span[@class="author__meta-date"]
+  content: //div[@id="article_content"]//div[contains(@class, "block-field-blocknodearticlebody")]//div[contains(@class, "field--name-body")]
+  exclusions:
+    - //div[contains(@class, "embedded-resource-list")]
+    - //span[@class="caption__byline"]/..
+    - //strong[contains(text(), "[ Download now:")]/..
+itsfoss.com:
+  feed: feed
+  title: //h1[@class="post-hero__title"]
+  author: //span[@class="post-info__author"]/a
+  date: //div[@class="post-info__dr"]/time
+  content: //article[contains(@class, " content ")]
+  exclusions:
+    - //h3[contains(@id, "related-read")]
+    - //figure[@class="kg-card kg-bookmark-card"]
+    - //h2[@id="more-from-its-foss"]/following-sibling::ul[1]
+    - //h2[@id="more-from-its-foss"]
+    - //strong[contains(text(), "Suggested Read")]/..
+news.itsfoss.com:
+  feed: rss
+  title: //h1[@class="c-topper__headline"]
+  summary: //p[@class="c-topper__standfirst"]
+  cover: //figure[@class="c-feature-image-figure"]/div/img
+  author: //div[@class="c-byline c-topper__byline"]/a
+  date: //time[@class="c-timestamp c-topper__timestamp"]
+  content: //article/div[contains(@class, "c-content")] 
+  exclusions:
+    - //h3[contains(@id, "related-read")]
+    - //figure[@class="kg-card kg-bookmark-card"]
+    - //h2[@id="more-from-its-foss"]/following-sibling::ul[1]
+    - //h2[@id="more-from-its-foss"]
+    - //strong[contains(text(), "Suggested Read")]/..
+www.debugpoint.com:
+  feed: feed
+  title: //h1[contains(@class, "entry-title s-post-title")]
+  author: //a[@class="auth-url"]
+  date: //time[contains(@class, "entry-date published")]
+  content: //div[@itemprop="articleBody"]
+  exclusions:
+    - //ins[@class="adsbygoogle"]
+    - //div[@class="dp-gnews-link"]
+    - //div[@class="dp-telegram-link"]
+    - //div[@class="dp-mastodon-link"]
+    - //div[contains(@class, "post-navigation-link-next")]
+    - //div[@id="ez-toc-container"]
+debugpointnews.com:
+  feed: feed
+  title: //h1[contains(@class, "entry-title")]
+  author: //h3[@class="auth-name"]/a
+  date: //time[contains(@class, "entry-date published")]
+  cover:
+  content: //div[contains(@class, "s-post-content")]
+  exclusions:
+    - //ins[@class="adsbygoogle"]
+    - //div[@class="dp-gnews-link"]
+    - //div[@class="dp-telegram-link"]
+    - //div[@class="sharedaddy sd-sharing-enabled"]
+    - //a[contains(text(), "pic.twitter.com")]
+    - //footer[@class="author_bio_section"]
+jvns.ca:
+  feed: atom.xml
+  title: //h1[@class="entry-title"]
+  author: //div[@id="wrap"]/header/hgroup/h1/a
+  date: //p[@class="meta"]/time
+  content: //div[@class="entry-content"]
+www.linuxtechi.com:
+  feed: feed
+  title: //h1[@class="entry-title"]
+  author: //span[@class="author-name"]/..
+  date: //time[@class="entry-date published"]
+  content: //div[@class="entry-content"]

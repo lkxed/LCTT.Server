@@ -1,0 +1,16 @@
+blog.centos.org:
+  title: //h1[@class="header__page__title"]
+  author: CentOS Blog https://blog.centos.org
+  content: /html/body/main/article
+  exclusions:
+    - //div[@id="comments"]
+    - //div[@class="aside__content__nav"]
+    - /html/body/main/article/h1
+fedoramagazine.org:
+  title: //h1[@class="post-title"]
+  cover: //div[@class="post-image"]
+  author: //span[@class="post-meta-author"]/a
+  date: //span[@class="post-meta-date"]/a
+  content: //div[@class="post-content"]
+  exclusions: 
+    - //div[contains(@class, "sharedaddy")]
