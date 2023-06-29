@@ -76,7 +76,7 @@ public static class GitHubService
         var baseRef = "master";
         var request = new NewPullRequest(title, head, baseRef);
         request.MaintainerCanModify = true;
-        request.Body = $"This article is collected by lkxed.";
+        request.Body = $"This article is collected by GITHUB_ID.";
         try
         {
             var pr = client.PullRequest.Create(baseOwner, name, request).GetAwaiter().GetResult();
