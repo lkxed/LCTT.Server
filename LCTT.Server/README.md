@@ -1,6 +1,8 @@
 # 使用说明
 
-默认阁下是 Linux 玩家。
+默认阁下是 Linux 玩家。该项目在 Windows 与 macOS 上均可运行。
+
+> 注意：该项目需要 x86_64 架构的系统。macOS 用户可尝试使用 Rosetta 转译模式下的终端进行操作。
 
 ## 准备工作
 
@@ -14,7 +16,8 @@
 
 0. 修改 [`LCTT.Server/Scripts/lci.ps1`](LCTT.Server/Scripts/lci.ps1) 中的 `$TranslateProject`
 1. 搜索替换项目中所有的 `GITHUB_ID` 和 `GITHUB_PERSONAL_ACCESS_TOKEN` 为实际值
-2. 在 PowerShell 环境下运行 `LCTT.Server/Scripts/lci.ps1` 以初始化客户端脚本
+2. 切换到 [`LCTT.Server/LCTT.Server`](LCTT.Server/LCTT.Server) 目录，运行 `dotnet tool restore`
+3. 在 PowerShell 环境下运行 `./Scripts/lci.ps1` 以初始化客户端脚本
 
 ## 日常使用
 
